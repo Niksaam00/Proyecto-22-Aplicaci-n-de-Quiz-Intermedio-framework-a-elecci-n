@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <main class="container d-flex justify-content-center align-items-center min-vh-100 py-4">
+
+        <div class="quiz-contenedor card shadow-sm border-0 p-4 p-md-5">
+
+            <section id="pantalla-inicio" class="pantalla">
+
+                <div class="etiqueta">QUIZ APP</div>
+
+                <h1>Pon a prueba tus conocimientos</h1>
+
+                <p class="descripcion">
+                    Demuestra cuánto sabes respondiendo estas preguntas
+                    de cultura general.
+                </p>
+
+                <div class="row g-3 mb-4">
+
+                    <div class="col-4">
+                        <div class="detalle">
+                            <span class="numero" id="total-preguntas"></span>
+                            <span>Preguntas</span>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="detalle">
+                            <span class="numero">60s</span>
+                            <span>Por pregunta</span>
+                        </div>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="detalle">
+                            <span class="numero">+1</span>
+                            <span>Por acierto</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button id="boton-empezar" class="btn boton-principal w-100">
+                    Comenzar examen
+                </button>
+
+            </section>
+
+            <section id="pantalla-quiz" class="pantalla oculto">
+
+                <div class="d-flex justify-content-between gap-2 mb-3 barra-superior">
+
+                    <span id="texto-progreso"></span>
+
+                    <span id="texto-puntaje"></span>
+
+                    <span id="texto-tiempo"></span>
+
+                </div>
+
+                <div class="progress mb-4">
+                    <div id="progreso" class="progress-bar"></div>
+                </div>
+
+                <div class="card tarjeta p-3 p-md-4 mb-3">
+
+                    <div class="etiqueta">PREGUNTA</div>
+
+                    <h2 id="texto-pregunta"></h2>
+
+                    <div id="contenedor-respuestas"></div>
+
+                    <p id="mensaje-respuesta"></p>
+
+                </div>
+
+                <button id="boton-siguiente" class="btn boton-principal w-100 oculto">
+                    Siguiente pregunta
+                </button>
+
+            </section>
+
+            <section id="pantalla-resultado" class="pantalla oculto">
+
+                <div class="etiqueta">RESULTADOS</div>
+
+                <h1>¡Examen terminado!</h1>
+
+                <div class="resultado-puntaje">
+
+                    <span id="puntaje-final"></span>
+
+                    <span id="puntaje-maximo"></span>
+
+                </div>
+
+                <p id="mensaje-final"></p>
+
+                <h2>Resumen de tus respuestas</h2>
+
+                <div id="lista-resultados"></div>
+
+                <button id="boton-reiniciar" class="btn boton-principal w-100 mt-3">
+                    Volver a intentar
+                </button>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
